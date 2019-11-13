@@ -12,10 +12,6 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 p,
 li,
 a {
@@ -54,4 +50,16 @@ a {
 
 .centralizar {
     text-align: center;
+}
+.nome{
+    border:1px dotted red;
+}
+
+.foto-recente{
+    font-family: Arial, Helvetica, sans-serif;
+    border:1px dashed green;
+}
+
+.descricao-div{
+    border: 1px double blue;
 }
