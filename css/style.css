@@ -1,6 +1,6 @@
 * { 
-    margin: 35px 40px 45px 50px;
-    padding: 50px 45px 40px 35px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -60,24 +60,33 @@ a {
 .nome{
     border: 1px dotted red;
     text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
 }
 
 .indice{
     text-align: center;
     border: 1px double orange;
+    margin: 25px 0;
+    padding: 10px 0;
 }
 
 .foto-recente{
     font-family: Arial, Helvetica, sans-serif;
     border: 1px dashed green;
     float: left;
-    width: 25%;
+    width: 35%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 25px;
 }
 
 .descricao-div{
     border: 1px double blue;
-    width: 45%;
+    width: 55%;
     float: right;
+    padding: 10px 15px;
+    margin: 0 25px;
 }
 
 .arruma-float{
@@ -89,4 +98,26 @@ a {
     border: 1px dashed purple;
     background-color: #FAEDCA;
     width: 90%;
+}
+
+.lista-hab{
+    border: 1px dotted goldenrod;
+    padding: 25px 30px;
+    margin: 25px 0;
+}
+
+.l-int{
+    float: left;
+    margin: 40px 35px;
+    padding: 20px;
+    width: 40%;
+    border: 1px solid saddlebrown;
+}
+
+.l-ext{
+    float: right;
+    margin: 40px 35px;
+    padding: 20px 15px;
+    width: 40%;
+    border: 1px solid brown;
 }
