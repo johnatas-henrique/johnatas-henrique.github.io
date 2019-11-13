@@ -1,5 +1,6 @@
 * { 
-    margin: 0px;
+    margin: 35px 40px 45px 50px;
+    padding: 50px 45px 40px 35px;
 }
 
 body {
@@ -10,6 +11,10 @@ h1 {
     color: #2A2E30;
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+    list-style-type: none;
 }
 
 p,
@@ -51,29 +56,37 @@ a {
 .centralizar {
     text-align: center;
 }
+
 .nome{
-    border:1px dotted red;
+    border: 1px dotted red;
     text-align: center;
+}
+
+.indice{
+    text-align: center;
+    border: 1px double orange;
 }
 
 .foto-recente{
     font-family: Arial, Helvetica, sans-serif;
-    border:1px dashed green;
+    border: 1px dashed green;
     float: left;
-    width: 38%;
+    width: 25%;
 }
 
 .descricao-div{
     border: 1px double blue;
-    width: 58%;
+    width: 45%;
     float: right;
 }
+
 .arruma-float{
     clear: both;
 }
+
 .imagem {
     padding: 10px 20px;
-    border:1px dashed purple;
+    border: 1px dashed purple;
     background-color: #FAEDCA;
     width: 90%;
 }
