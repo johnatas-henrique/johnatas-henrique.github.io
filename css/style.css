@@ -53,6 +53,7 @@ a {
 }
 .nome{
     border:1px dotted red;
+    text-align: center;
 }
 
 .foto-recente{
