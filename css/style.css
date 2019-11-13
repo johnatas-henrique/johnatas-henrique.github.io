@@ -60,13 +60,20 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     border:1px dashed green;
     float: left;
+    width: 38%;
 }
 
 .descricao-div{
     border: 1px double blue;
-    width: 60%;
+    width: 58%;
     float: right;
 }
 .arruma-float{
     clear: both;
+}
+.imagem {
+    padding: 10px 20px;
+    border:1px dashed purple;
+    background-color: #FAEDCA;
+    width: 90%;
 }
