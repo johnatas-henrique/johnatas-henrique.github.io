@@ -62,6 +62,37 @@ article a:hover {
     clear:both;
 }
 
+#redes-sociais{
+    background-color: #317AFD;
+    position: fixed;
+    height: 19px;
+    right: 5px;
+}
+
+.gaiola{
+	display:inline;
+	float:left;
+	width:28px;
+	height:20px;
+	overflow:hidden;
+    margin:0;
+    /*background:url("../imagens/bg.png");*/
+    margin: -1px 6px;
+}
+
+.passaro{
+	width:56px;
+	height:20px;
+	background:url("../imagens/twitter-animado.png");
+	margin-left:-28px;
+	cursor:pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.passaro:hover{
+	margin-left:0px;
+}
+
 .titulo {
     margin: 40px auto;
     font-size: 3em;
@@ -91,8 +122,35 @@ aside.menu-lateral ul a {
     background-color: #003469;
     padding: 10px 0;
     color: white;
-    font-weight: bold;
-    
+    font-weight: bold;    
+}
+
+.fa-facebook-square {
+    color:darkblue;
+    background-color: white;
+}
+
+.fa-facebook-square:hover {
+    color:green;
+    animation: fa-spin 2s infinite linear;
+}
+
+.fa-instagram {
+    color: #f783ac;
+}
+
+.fa-instagram:hover {
+    color:green;
+    animation: fa-spin 2s infinite;
+}
+
+.fa-twitter {
+    color:darkblue;
+}
+
+.fa-facebook-square:hover {
+    color:green;
+    animation: fa-spin 2s infinite linear;
 }
 
 aside.menu-lateral a:hover {
@@ -106,15 +164,11 @@ ol {
   }  
 
 ol > li {      
-    position:relative;
-    
-     
+    position:relative; 
     list-style-type: decimal;    
     border-top: 2px solid rgb(8, 4, 63);  
     
 }  
-
- 
 
    ol a {
     text-decoration: none;
@@ -216,7 +270,6 @@ ol a:hover {
 .tabela tr:hover {
     background-color: #317AFD;
     color: white;
-    font-weight: bold;
 }
 
 .tabela th {
