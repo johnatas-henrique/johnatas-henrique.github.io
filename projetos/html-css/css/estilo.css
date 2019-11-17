@@ -8,7 +8,7 @@ body {
     background-color: #FCF7DE;
 }
 
-nav {
+nav.nav-horizontal {
     border: 2px solid rgb(8, 4, 63);
     background-color: #317AFD;
     position: fixed;
@@ -17,32 +17,34 @@ nav {
     left: 0px;
 }
 
-nav ul {
+nav.nav-horizontal ul {
     text-align: center;
 }
 
-nav li {
+nav.nav-horizontal li {
     display: inline-block;
     padding: 5px 15px;
     background-color: #003469;
     list-style-type: none;
 }
 
-nav li:hover {
+nav.nav-horizontal li:hover {
     background-color: rgb(8, 4, 63);
 }
 
-nav a {
+nav.nav-horizontal a {
     text-decoration: none;
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
 }
 
-article a:link, article a:visited {
+a:link.leia-mais-topo, a:visited.leia-mais-topo {
     display: block;
+}
+article a:link, article a:visited {
     padding: 5px 5px;
     background-color: #003469;
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
     margin-left: auto;
     margin-right: 10px;
@@ -70,30 +72,30 @@ article a:hover {
     float:left;
     background-color: #317AFD;
     margin-left: 30px;
-    width: 15%;
+    width: 18%;
 }
 
 .borda-menu {
     border: 2px solid rgb(8, 4, 63);
 }
 
-aside ul li {
+aside.menu-lateral ul li {
     border-top: 2px solid rgb(8, 4, 63);
     list-style-type: none;
 }
 
-aside ul a {
+aside.menu-lateral ul a {
     text-decoration: none;
     text-align: center;
     display: block;
     background-color: #003469;
     padding: 10px 0;
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
     
 }
 
-aside ul a:hover {
+aside.menu-lateral a:hover {
     text-decoration: none;
     background-color: rgb(8, 4, 63);
 }
@@ -120,7 +122,7 @@ ol > li {
     display: block;
     background-color: #003469;
     padding: 10px 0;
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
      
 }
@@ -133,7 +135,7 @@ ol a:hover {
 .titulo-menu-lateral {
     text-align: center;
     font-size: 1.6em;
-    color: whitesmoke;  
+    color: white;  
     line-height: 60px;
 }
 
@@ -145,7 +147,7 @@ ol a:hover {
 
 .noticias-topo {
     float: right;
-    width: 80%;
+    width: 78%;
 }
 
 .noticias-capa {
@@ -155,16 +157,16 @@ ol a:hover {
 }
 
 .container-noticias-topo {
-    border: 2px solid #003469;
+    border: 2px solid rgb(8, 4, 63); 
     float: left;
     width: 45%;
     padding: 10px 0;
     margin: 0 10px;
 }
 
-.chamada-noticias-topo {
+.chamada-noticias {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.7em;
     font-weight: bold;
     padding: 0 20px 15px 20px;
 }
@@ -175,13 +177,67 @@ ol a:hover {
     display: block;
 }
 
-.desc-noticias-topo {
+.desc-noticias {
     text-align: justify;
     padding: 20px 15px 10px 15px;
 }
 
+.noticias-lista {
+    border: 2px solid rgb(8, 4, 63); 
+    width: 90%;
+    padding: 10px 0;
+    margin: 40px auto;
+}
+
+.noticias-baixo {
+    border-top: 2px solid rgb(8, 4, 63); 
+    border-bottom: 2px solid rgb(8, 4, 63); 
+    width: 98%;
+    padding: 10px 0;
+    margin: 40px auto;
+}
+
+.tabela{
+    margin: 20px auto;    
+}
+
+.tabela td, .tabela th{
+    border: 2px solid rgb(8, 4, 63); 
+    border-radius: 10px;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+.tabela tr:nth-child(even) {
+    background-color: #bbb;
+    color:
+}
+
+.tabela tr:hover {
+    background-color: #317AFD;
+    color: white;
+    font-weight: bold;
+}
+
+.tabela th {
+    background-color: rgb(8, 4, 63);
+    color: white;
+}
+
 .rodape{
     margin-top: 40px;
+}
+
+.texto-rodape{
     text-align: center;
     font-size: 0.9em;
+}
+
+.leitor-de-tela {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
