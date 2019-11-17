@@ -38,3 +38,13 @@ nav a {
 .clear {
     clear:both;
 }
+
+.titulo {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.rodape{
+    text-align: center;
+    font-size: 0.9em;
+}
