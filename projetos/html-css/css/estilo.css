@@ -6,3 +6,35 @@
 body {
     background-color: #FCF7DE;
 }
+
+nav {
+    background-color: #FDDFDF;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #E79A93;
+}
+
+nav li:hover {
+    background-color: #317AFD;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.clear {
+    clear:both;
+}
