@@ -9,6 +9,7 @@ body {
 }
 
 nav {
+    border: 2px solid rgb(8, 4, 63);
     background-color: #317AFD;
     position: fixed;
     width: 100%;
@@ -24,10 +25,11 @@ nav li {
     display: inline-block;
     padding: 5px 15px;
     background-color: #003469;
+    list-style-type: none;
 }
 
 nav li:hover {
-    background-color: #317AFD;
+    background-color: rgb(8, 4, 63);
 }
 
 nav a {
@@ -38,18 +40,20 @@ nav a {
 
 article a:link, article a:visited {
     display: block;
-    padding: 5px 15px;
+    padding: 5px 5px;
     background-color: #003469;
     color: whitesmoke;
     font-weight: bold;
     margin-left: auto;
+    margin-right: 10px;
+    text-align: center;
     width: 20%;
     text-decoration: none;
 }
 
 article a:hover {
     text-decoration: none;
-    background-color: #317AFD;
+    background-color: rgb(8, 4, 63);
 }
 
 .clear {
@@ -62,10 +66,98 @@ article a:hover {
     text-align: center;
 }
 
+.menu-lateral {
+    float:left;
+    background-color: #317AFD;
+    margin-left: 30px;
+    width: 15%;
+}
+
+.borda-menu {
+    border: 2px solid rgb(8, 4, 63);
+}
+
+aside ul li {
+    border-top: 2px solid rgb(8, 4, 63);
+    list-style-type: none;
+}
+
+aside ul a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #003469;
+    padding: 10px 0;
+    color: whitesmoke;
+    font-weight: bold;
+    
+}
+
+aside ul a:hover {
+    text-decoration: none;
+    background-color: rgb(8, 4, 63);
+}
+
+ol {
+    counter-reset:li;
+    background-color: #003469;
+  }  
+
+ol > li {      
+    position:relative;
+    
+     
+    list-style-type: decimal;    
+    border-top: 2px solid rgb(8, 4, 63);  
+    
+}  
+
+ 
+
+   ol a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #003469;
+    padding: 10px 0;
+    color: whitesmoke;
+    font-weight: bold;
+     
+}
+
+ol a:hover {
+    text-decoration: none;
+    background-color: rgb(8, 4, 63);
+}
+
+.titulo-menu-lateral {
+    text-align: center;
+    font-size: 1.6em;
+    color: whitesmoke;  
+    line-height: 60px;
+}
+
+.divisao-barra-lateral{
+    background: #FCF7DE;
+    border: none;
+    height: 80px;
+}
+
+.noticias-topo {
+    float: right;
+    width: 80%;
+}
+
+.noticias-capa {
+    margin: 40px auto;
+    font-size: 2em;
+    text-align: center;
+}
+
 .container-noticias-topo {
     border: 2px solid #003469;
     float: left;
-    width: 30%;
+    width: 45%;
     padding: 10px 0;
     margin: 0 10px;
 }
@@ -89,6 +181,7 @@ article a:hover {
 }
 
 .rodape{
+    margin-top: 40px;
     text-align: center;
     font-size: 0.9em;
 }
