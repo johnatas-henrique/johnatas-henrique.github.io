@@ -252,6 +252,10 @@ ol a:hover {
     margin: 40px auto;
 }
 
+.centralizar {
+    text-align: center;
+}
+
 .tabela {
     margin: 20px auto;
 }
