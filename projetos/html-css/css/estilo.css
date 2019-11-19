@@ -9,7 +9,8 @@ body {
 }
 
 nav.nav-horizontal {
-    border: 2px solid rgb(8, 4, 63);
+    border-top: 2px solid rgb(8, 4, 63);
+    border-bottom: 2px solid rgb(8, 4, 63);
     background-color: #017Acb;
     position: fixed;
     width: 100%;
@@ -94,12 +95,6 @@ article a:hover {
 
 .passaro:hover {
     margin-left: 0px;
-}
-
-.titulo {
-    margin: 40px auto;
-    font-size: 3em;
-    text-align: center;
 }
 
 .menu-lateral {
@@ -321,4 +316,16 @@ a:hover.voltar-topo {
     background-color: rgb(8, 4, 63);
     color: white;
     padding: 4px 0;
+}
+
+.titulo {
+    margin: 40px auto 40px auto;
+    font-size: 3em;
+    text-align: center;
+}
+
+:target {
+    padding-top: 50px;
+    margin-top: 0px;
+    display: block;
 }
