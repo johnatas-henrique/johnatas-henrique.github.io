@@ -10,7 +10,7 @@ body {
 
 nav.nav-horizontal {
     border: 2px solid rgb(8, 4, 63);
-    background-color: #317AFD;
+    background-color: #017Acb;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -66,7 +66,7 @@ article a:hover {
 }
 
 #redes-sociais {
-    background-color: #317AFD;
+    background-color: #017Acb;
     position: fixed;
     height: 19px;
     right: 5px;
@@ -104,7 +104,7 @@ article a:hover {
 
 .menu-lateral {
     float: left;
-    background-color: #317AFD;
+    background-color: #017Acb;
     margin-left: 30px;
     width: 18%;
 }
@@ -170,6 +170,7 @@ ol>li {
     position: relative;
     list-style-type: decimal;
     border-top: 2px solid rgb(8, 4, 63);
+    list-style-position: initial;
 }
 
 ol a {
@@ -274,7 +275,7 @@ ol a:hover {
 }
 
 .tabela tr:hover {
-    background-color: #317AFD;
+    background-color: #017Acb;
     color: white;
 }
 
