@@ -103,6 +103,7 @@ body {
   width: auto;
   font-size: 1.2em;
   padding-left: 0.5ch;
+  font-weight: 700;
 }
 
 .tarefa-ativa {
@@ -112,12 +113,12 @@ body {
 .tarefa-riscada {
   text-decoration: line-through;
   border: 2px solid red;
+  color: red;
 }
 
 .tarefa-selecionada {
   background: rgb( 187 , 187 , 187 );
-  font-size: 1.3em;
-  font-weight: 700;
+  font-size: 1.4em;
   border: 2px solid black;
 
 }
