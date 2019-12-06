@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="topo" class="titulo">
+      Projeto Meme Generator
+    </h1>
+  </header>
+
+  <section class="container">
+    <form class="centralizar">
+      <label for="caixa-input">
+        <h2 class="texto-info">Digite a frase: </h2></label>
+      <input class="caixa-texto-input" id="caixa-input" type="text" name="frase" placeholder="Digite aqui sua frase"
+        maxlength="100" size="60">
+      <span class="texto-info">Selecione uma foto:</span>
+      <input class="esconder-caixa" type="file" id="botao-foto">
+      <label for="botao-foto">
+        <h3>Clica aqui!</h3>
+      </label>
+    </form>
+  </section>
+
+  <section class="container container-foto">
+    <img id="img-foto" alt="foto escolhida pelo usuário como imagem para o gerador de memes">
+    <h2 class="esconder-caixa">Meme criado</h2>
+    <div class="texto-alto"></div>
+    <div class="texto-baixo"></div>
+  </section>
+  <footer class="rodape">
+    <hr>
+    <h3 class="texto-rodape">
+      Projeto da 5a. Semana - JavaScript - Johnatas Henrique
+    </h3>
+    <p class="texto-rodape">
+      <strong>#vqv #goTrybe</strong> -
+      <a class="voltar-topo" href="#topo">
+        Voltar ao Topo
+      </a>
+    </p>
+  </footer>
+
+  <script src='js/script.js'></script>
+</body>
+
+</html>
