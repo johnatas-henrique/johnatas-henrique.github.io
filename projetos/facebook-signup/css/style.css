@@ -521,7 +521,7 @@ main {
   margin: 20px 0;
 }
 
-[ data-type = 'validator-error' ] , [ data-type = 'validator-email' ] {
+[ data-type = 'validator-error' ] , [ data-type = 'validator-css' ] {
   font-size: 13px;
   position: absolute;
   z-index: 10;
@@ -534,7 +534,7 @@ main {
   pointer-events: none;
 }
 
-[ data-type = 'validator-error' ]:before , [ data-type = 'validator-email' ]:before {
+[ data-type = 'validator-error' ]:before , [ data-type = 'validator-css' ]:before {
   content: '';
   width: 0;
   height: 0;
