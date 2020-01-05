@@ -45,6 +45,18 @@ a:hover {
   border-radius: 0.5em;
 }
 
+.alinha-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-helper {
+  font-size: 4vw;
+  font-family: 'Impacts', sans-serif;
+  margin-right: 0.5em;
+}
+
 .animated-menu {
   display: inline-block;
   cursor: pointer;
@@ -53,10 +65,10 @@ a:hover {
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
+  width: 2.5em;
+  height: 0.3em;
+  background-color: black;
+  margin: 0.4em 0;
   transition: 0.4s;
 }
 
@@ -132,6 +144,7 @@ a:hover {
 }
 
 .navbar-ulist li {
+  margin: 0.25em 0;
   text-align: center;
   border-bottom: 1px solid black;
 }
@@ -188,25 +201,25 @@ a:hover {
 .daily-comp {
   background-color: black;
   color: white;
-  width: 31%;
+  width: 32%;
   font-family: 'Kreon', serif;
-  text-align: justify;
+  text-align: center;
   padding: 0.4em;
   position: relative;
+  font-size: 3vw;
+  font-family: 'Rokkitt', serif;
 }
 
 .daily-comp-l1 {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
+  text-align: center;
+  display: block;
 }
 
 .daily-comp-l2 {
-  font-size: 2.6vw;
+  display: block;
+  font-size: 2.1vw;
   font-weight: 700;
-}
-
-.daily-comp-l3 {
-  font-size: 3vw;
-  font-family: 'Rokkitt', serif;
 }
 
 .daily-comp-button {
@@ -218,6 +231,7 @@ a:hover {
   border: none;
   position: absolute;
   right: 1vw;
+  bottom: 2vw;
 }
 
 .rodape {
@@ -226,11 +240,11 @@ a:hover {
 }
 
 .national-weather {
-  width: 19%;
+  width: 34%;
   margin-left: 0.625em;
   text-align: justify;
   padding-bottom: 0.4em;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: 'Mariage', cursive;
 }
 
@@ -238,17 +252,16 @@ a:hover {
   display: inline-block;
   width: 100%;
   text-align: center;
-  font-weight: 700;
-  font-size: 1.7vw;
+  font-size: 4vw;
   font-family: 'Impacts', sans-serif;
 }
 
 .zodiac-lorem {
-  width: 45%;
+  width: 34%;
   margin-left: 0.625em;
   text-align: justify;
   padding-bottom: 0.4em;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: 'Mariage', cursive;
 }
 
@@ -275,41 +288,41 @@ a:hover {
 }
 
 .text-over-border-r1 {
-  right: -7.8em;
-  top: 15em;
+  right: -7.9em;
+  top: 40vw;
 }
 
 .boy-who-lived {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 1em;
 }
 
-.aside-rita-article {
+.aside-article {
   width: 30%;
-  margin: 0.625em 1em 1.25em 0;
+  padding: 0.625em 0.75em 1.25em 0;
   text-align: justify;
   padding-bottom: 0.4em;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: 'Mariage', cursive;
 }
 
 .aside-title {
   background-color: black;
   color: white;
-  padding: 1em;
+  padding: 1em 0.1em;
+  font-size: 6vw;
   text-align: center;
 }
 
 .first-letter {
-  margin-top: 0.75em;
+  padding-top: 0.75em;
 }
 
 .first-letter:first-letter {
   text-transform: capitalize;
   font-size: 4em;
-  margin: 0.15em 0.3em 0.25em 0.1em;
+  margin: 0 0.3em 0 0;
   padding: 0.2em 0.1em 0.1em 0.2em;
   float: left;
   font-weight: 700;
@@ -320,69 +333,72 @@ a:hover {
   font-size: 8vw;
   font-family: 'Impacts', sans-serif;
   text-align: center;
-  font-weight: 700;
   margin: 0;
   width: 100%;
 }
 
 .main-lead-1 {
-  margin: 0.625em 0 1.25em 1.5em;
+  padding: 0.625em 0 1.25em 1.5em;
   text-align: justify;
   padding-bottom: 0.4em;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: 'Mariage', cursive;
 }
 
 .main-lead-2,
 .main-lead-3 {
-  margin: 0.625em 0 0 0.25em;
+  padding: 0.625em 0 0 0.25em;
   text-align: justify;
   padding-bottom: 0.4em;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: 'Mariage', cursive;
-  column-count: 2;
+  
 }
 
 .main-img {
-  margin: 0.625em 0 0 0.25em;
+  padding: 0.625em 0 0 0.25em;
 }
 
 .broom-lead {
   font-size: 6vw;
   font-family: 'Impacts', sans-serif;
   text-align: center;
-  font-weight: 700;
-  margin: 0;
+  font-weight: 400;
+  padding: 0;
   width: 100%;
 }
 
 .broom-lead-1 {
-  margin: 0.625em 0 1.25em 1.5em;
+  padding: 0.625em 0 1.25em 1.5em;
   text-align: justify;
   padding-bottom: 0.4em;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: 'Mariage', cursive;
 }
 
 .broom-img {
   width: 60%;
-  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .texto-rodape {
+  color: white;
   text-align: center;
   margin-top: 0.25em;
 }
-
-.flex-col-30 {
-  flex: 30%;
-  max-width: 30%;
+.texto-rodape a , .texto-rodape a.visited {
+  color: white;
 }
 
-.flex-col-60 {
+.flex-col-1 {
+  flex: 40%;
+  max-width: 40%;
+}
+
+.flex-col-2 {
   flex: 60%;
-  margin: 0 0.75em 0 0.5em;
   max-width: 60%;
+  padding: 0 0.75em 0 0.5em;
 }
 
 .bc {
@@ -392,13 +408,18 @@ a:hover {
 @media screen and (min-width: 761px),
 (orientation: landscape) {
 
-  .animated-menu {
+  body {
+    background-color: red;
+  }
+
+  .alinha-menu {
     display: none;
   }
 
   .navbar-ulist {
     display: flex;
     justify-content: center;
+    margin-top: 0.5em;
   }
 
   .navbar-ulist li {
@@ -410,4 +431,13 @@ a:hover {
   .navbar-ulist a {
     font-size: 3vw;
   }
+
+  .main-lead-1 {
+    padding-left: 0.75em;
+  }
+
+  .main-lead-2, .main-lead-3 {
+    column-count: 2;
+  }
+
 }
