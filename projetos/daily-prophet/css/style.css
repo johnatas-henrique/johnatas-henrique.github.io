@@ -18,6 +18,7 @@ body {
   background-color: black;
   font-family: 'Vollkorn', serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 li {
@@ -43,6 +44,10 @@ a:hover {
   color: white;
   padding: 0.25em;
   border-radius: 0.5em;
+}
+
+.rel-anim {
+  position: relative;
 }
 
 .alinha-menu {
@@ -115,6 +120,10 @@ a:hover {
   margin-right: 1em;
 }
 
+.w-25 {
+  width: 25%;
+}
+
 .w-70 {
   width: 70%;
 }
@@ -129,12 +138,11 @@ a:hover {
   border-radius: 1em;
   padding: 0.5em;
   width: 98%;
-  max-width: 64em;
 }
 
 .navbar {
   width: 100%;
-  padding-top: 1.25em;
+  padding-top: 5vw;
 }
 
 .navbar-ulist {
@@ -234,11 +242,6 @@ a:hover {
   bottom: 2vw;
 }
 
-.rodape {
-  font-size: 0.8em;
-  margin-bottom: 2.5em;
-}
-
 .national-weather {
   width: 34%;
   margin-left: 0.625em;
@@ -290,6 +293,17 @@ a:hover {
 .text-over-border-r1 {
   right: -7.9em;
   top: 40vw;
+}
+
+.flex-col-1 {
+  flex: 40%;
+  max-width: 40%;
+}
+
+.flex-col-2 {
+  flex: 60%;
+  max-width: 60%;
+  padding: 0 0.75em 0 0.5em;
 }
 
 .boy-who-lived {
@@ -347,12 +361,12 @@ a:hover {
 
 .main-lead-2,
 .main-lead-3 {
-  padding: 0.625em 0 0 0.25em;
+  padding: 0.625em 0.25em 0 0.25em;
   text-align: justify;
   padding-bottom: 0.4em;
   font-size: 3vw;
   font-family: 'Mariage', cursive;
-  
+
 }
 
 .main-img {
@@ -378,39 +392,29 @@ a:hover {
 
 .broom-img {
   width: 60%;
-  padding: 0 auto;
+  cursor: pointer;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+.rodape {
+  font-size: 5vw;
+  margin-bottom: 2.5em;
 }
 
 .texto-rodape {
-  color: white;
   text-align: center;
   margin-top: 0.25em;
 }
-.texto-rodape a , .texto-rodape a.visited {
-  color: white;
+
+.pomo-animation {
+  position: absolute;
+  transform: translate(241%, -17%);
+  z-index: 3;
+  cursor: pointer;
 }
 
-.flex-col-1 {
-  flex: 40%;
-  max-width: 40%;
-}
-
-.flex-col-2 {
-  flex: 60%;
-  max-width: 60%;
-  padding: 0 0.75em 0 0.5em;
-}
-
-.bc {
-  outline: 5px solid red;
-}
-
-@media screen and (min-width: 761px),
-(orientation: landscape) {
-
-  body {
-    background-color: red;
-  }
+@media screen and (min-width: 761px) {
 
   .alinha-menu {
     display: none;
@@ -423,7 +427,7 @@ a:hover {
   }
 
   .navbar-ulist li {
-    margin: 0 0.25em;
+    margin: 0 0.75em;
     display: inline-block;
     border-bottom: none;
   }
@@ -432,12 +436,113 @@ a:hover {
     font-size: 3vw;
   }
 
+  .flex-col-1 {
+    flex: 35%;
+    max-width: 35%;
+  }
+
+  .flex-col-2 {
+    flex: 65%;
+    max-width: 65%;
+  }
+
   .main-lead-1 {
     padding-left: 0.75em;
   }
 
-  .main-lead-2, .main-lead-3 {
+  .main-lead-2,
+  .main-lead-3 {
     column-count: 2;
+  }
+
+  .broom-lead-1 {
+    padding-left: 0.75em;
+  }
+
+  .pomo-animation {
+    transform: translate(-12%, 47%);
+    animation: pomo 10s linear 3s 3 alternate forwards;
+  }
+
+  .pomo-animation:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+
+  @keyframes pomo {
+    0% {
+      transform: translate(-12%, 47%);
+    }
+
+    45% {
+      transform: translate(255%, 93%);
+    }
+
+    50% {
+      transform: translate(284%, 88%);
+    }
+
+    60% {
+      transform: translate(322%, 51%);
+    }
+
+    75% {
+      transform: translate(331%, -21%);
+    }
+
+    87.5% {
+      transform: translate(155%, -3%);
+    }
+
+    93% {
+      transform: translate(224%, 7%);
+    }
+
+    100% {
+      transform: translate(241%, -17%);
+    }
+  }
+
+  .broom-animation {
+    animation: broom 5s linear 1 forwards;
+  }
+
+  @keyframes broom {
+    0% {
+      transform: scale(1.0, 1.0);
+    }
+
+    12.5% {
+      transform: scale(2.0, 2.0);
+    }
+
+    25% {
+      transform: rotate(45deg);
+    }
+
+    37.5% {
+      transform: rotate(360deg);
+    }
+
+    50% {
+      transform: translate(0, -20%);
+    }
+
+    62.5% {
+      transform: translate(0, 20%);
+    }
+
+    75% {
+      transform: skew(-60deg);
+    }
+
+    87.5% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: translate(4000px, -2000px);
+    }
   }
 
 }
