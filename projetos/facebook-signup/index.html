@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="libs/pikaday.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Facebook - entre ou cadastre-se</title>
+</head>
+
+<body>
+    <nav class="fundo-azul">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="#" title="Ir para a página inicial do Facebook">
+                    <span class="logo-img"></span><u class="para-cego-ver">Facebook</u></a>
+            </div>
+            <div class="menu-login-container">
+                <div class="padding-label login-label">
+                    <label for="user">Email ou telefone</label>
+                </div>
+                <div class="padding-label login-label">
+                    <label for="password">Senha</label>
+                </div>
+                <div class="padding-input">
+                    <input type="text" name="email" id="user" class="menu-login-caixa box-sizing-off">
+                </div>
+                <div class="padding-input">
+                    <input type="password" name="password" id="password" class="menu-login-caixa box-sizing-off">
+                </div>
+                <div class="padding-button-login">
+                    <label for="entrar" class="label-submit">
+                        <input type="submit" name="entrar" id="entrar" value="Entrar"
+                            class="menu-login-botao box-sizing-off">
+                    </label>
+                </div>
+                <div class="padding-link"></div>
+                <div class="padding-link">
+                    <a href="#">Esqueceu a conta?</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="overlay">
+            <div class="gradient">
+                <div class="gradient-container">
+                    <aside>
+                        <p class="texto-aside">
+                            O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua
+                            vida.
+                        </p>
+                        <img class="mapa-aside" src="imagens/mapa.png">
+                    </aside>
+                    <section>
+                        <div class="textos-section">
+                            <div class="texto-maior">
+                                Abra uma conta
+                            </div>
+                            <div class="texto-menor">
+                                É rápido e fácil.
+                            </div>
+                        </div>
+                        <div>
+                            <div class="padding-registration">
+                                <form class="register" id="form-register">
+                                    <div class="register-div tam-meia mr-11 mb-10" id="container-nome">
+                                        <label class="placeholder" for="nome">
+                                            <div>Nome</div>
+                                        </label>
+                                        <input data-rule="required" type="text" class="register-input tam-meia"
+                                            id="nome" name="nome">
+                                        <div class="error esconder" data-type="validator-css" id="show-nome">Números e
+                                            caracteres especiais não são aceitos.</div>
+                                    </div>
+                                    <div class="register-div tam-meia mb-10" id="container-sobrenome">
+                                        <label class="placeholder" for="sobrenome">
+                                            <div>Sobrenome</div>
+                                        </label>
+                                        <input data-rule="required" type="text" class="register-input tam-meia"
+                                            id="sobrenome" name="sobrenome">
+                                        <div class="error esconder" data-type="validator-css" id="show-sobrenome">
+                                            Números e caracteres especiais não são aceitos.</div>
+                                    </div>
+                                    <div class="register-div tam-inteira mb-10" id="fone-email">
+                                        <label class="placeholder" for="fone-ou-email">
+                                            <div>Celular ou email</div>
+                                        </label>
+                                        <input data-rule="required" type="text" class="register-input tam-inteira"
+                                            id="fone-ou-email" name="fone-ou-email">
+                                        <div class="error esconder" data-type="validator-css" id="show-email">Insira um
+                                            número de celular ou email válido.<br>Exemplos válidos: 11987876565 ou
+                                            contato@provedor.com</div>
+                                    </div>
+                                    <div class="register-div tam-inteira mb-10">
+                                        <label class="placeholder" for="senha">
+                                            <div>Nova senha</div>
+                                        </label>
+                                        <input data-rule="required|minlength-6" type="password"
+                                            class="register-input tam-inteira" id="senha" name="senha">
+                                    </div>
+                                    <div class="texto-form-subtitle">Data de nascimento</div>
+                                    <div class="register-div tam-dtnasc" id="pikaday">
+                                        <label class="placeholder padding-dtnasc" for="dtnasc">
+                                            <div>Data nascimento</div>
+                                        </label>
+                                        <input data-rule="required|dtval" type="text" class="register-input tam-dtnasc"
+                                            id="dtnasc" name="dtnasc" maxlength="10" readonly>
+                                        <div class="error esconder" data-type="validator-css" id="show-pikaday">Parece
+                                            que você
+                                            inseriu informações incorretas. Use sua data de nascimento verdadeira.</div>
+                                    </div>
+                                    <a href="#" title="Clique para obter mais informações" id="dtnasc-help"
+                                        class="button-helper mt-7 ml-10">
+                                        <span class="button-img"></span>
+                                    </a>
+                                    <div>
+                                        <div class="texto-form-subtitle">Gênero</div>
+                                        <span class="gender-block" id="radio-container">
+                                            <span class="gender-option mr-4">
+                                                <input type="radio" class="gender-input" name="genero" value="1"
+                                                    id="feminino">
+                                                <label class="gender-label" for="feminino">Feminino</label>
+                                            </span>
+                                            <span class="gender-option ml-m4">
+                                                <input type="radio" class="gender-input" name="genero" value="2"
+                                                    id="masculino">
+                                                <label class="gender-label" for="masculino">Masculino</label>
+                                            </span>
+                                            <span class="gender-option ml-m4">
+                                                <input type="radio" class="gender-input" name="genero" value="3"
+                                                    id="personalizado">
+                                                <label class="gender-label" for="personalizado">Personalizado</label>
+                                            </span>
+                                            <div class="error esconder" data-type="validator-css" id="show-genero">
+                                                Escolha um gênero. Você poderá alterar quem pode ver isso
+                                                posteriormente.</div>
+                                        </span>
+                                        <a href="#" title="Clique para obter mais informações" id="gender-help"
+                                            class="button-helper ml-10">
+                                            <span class="button-img"></span>
+                                        </a>
+                                    </div>
+                                    <div class="mt-4 esconder" id="show-undefined">
+                                        <div class="mt-5">
+                                            <select class="select-pronome">
+                                                <option selected="1" value="" disabled="1">Selecione seu pronome
+                                                </option>
+                                                <option value="1">Feminino: "Deseje a ela um feliz aniversário!"
+                                                </option>
+                                                <option value="2">Masculino: "Deseje a ele um feliz aniversário!"
+                                                </option>
+                                                <option value="3">Neutro: "Deseje a ele(a) um feliz aniversário!"
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-select-pronome">O seu pronome fica visível para todos.</div>
+                                        <div class="register-div tam-inteira mt-8 mb-1">
+                                            <label class="placeholder" for="gender-opt">
+                                                <div>Gênero (opcional)</div>
+                                            </label>
+                                            <input type="text" class="register-input tam-inteira" id="gender-opt"
+                                                name="gender-opt">
+                                        </div>
+                                    </div>
+                                    <div class="tam-inteira">
+                                        <p class="docs-terms">
+                                            Ao clicar em Cadastre-se, você concorda com nossos
+                                            <a href="#">Termos</a>
+                                            ,
+                                            <a href="#">Política de Dados</a>
+                                            e
+                                            <a href="#">Política de Cookies</a>.
+                                            Você pode receber notificações por SMS e pode cancelar isso quando quiser.
+                                        </p>
+                                    </div>
+                                    <div class="tam-inteira">
+                                        <button type="submit" id="enviar"
+                                            class="button-submit mx-10">Cadastre-se</button>
+                                    </div>
+                                </form>
+                                <div class="texto-criar-pg">
+                                    <a href="#"">Criar uma Página</a>
+                                    para uma celebridade, banda ou empresa.
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" fechamento"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="align-footer">
+                <ul class="lang-list">
+                    <li>Português (Brasil)</li>
+                    <li>
+                        <a href="#" title="English (US)">English (US)</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Español">Español</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Français (France)">Français (France)</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Italiano">Italiano</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Deutsch">Deutsch</a>
+                    </li>
+                    <li>
+                        <a href="#" title="العربية">العربية</a>
+                    </li>
+                    <li>
+                        <a href="#" title="हिन्दी">हिन्दी</a>
+                    </li>
+                    <li>
+                        <a href="#" title="中文(简体)">中文(简体)</a>
+                    </li>
+                    <li>
+                        <a href="#" title="日本語">日本語</a>
+                    </li>
+                    <li>
+                        <a class="link-plus" href="#" title="Mostrar mais idiomas">
+                            <span class="link-plus-img"></span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="spacing-line"></div>
+                <div class="ml-fix">
+                    <ul class="links-list">
+                        <li>
+                            <a href="#" title="Cadastre-se no Facebook">Cadastre-se</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Entrar no Facebook">Entrar</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Confira o Messenger">Messenger</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Facebook Lite para Android">Facebook Lite</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Browse our Watch videos">Watch</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Navegue no nosso diretório de pessoas">Pessoas</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Pesquisar nosso diretório de páginas">Páginas</a>
+                        </li>
+                        <li>
+                            <a href="#">Categorias de Página</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Confira locais populares no Facebook">Locais</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Confira os jogos do Facebook">Jogos</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Navegue pelo nosso diretório de locais">Locais</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Compre e venda no Facebook Marketplace">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Navegue pelo nosso diretório de grupos">Grupos</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Confira o Instagram">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Navegar pelo nosso diretório de listas locais">Local</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Doe para causas importantes">Campanhas de arrecadação de fundos</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Browse our Facebook Services directory">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                title="Leia nosso blog, descubra a central de recursos e encontre oportunidades de trabalho">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Anuncie no Facebook">Criar anúncio</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Criar uma Página">Criar Página</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Desenvolver em nossa plataforma">Desenvolvedores</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                title="Dê um passo adiante na sua carreira em nossa incrível empresa">Carreiras</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Saiba mais sobre sua privacidade e o Facebook">Privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Saiba mais sobre cookies e o Facebook">Cookies</a>
+                        </li>
+                        <li>
+                            <a class="link-opt-anuncio" href="#" title="Saiba mais sobre as Opções de anúncio">
+                                Opções de anúncio<span class="opt-anuncio-img"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Leia os nossos termos e políticas">Termos</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Acesse nossa Central de Ajuda">Ajuda</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <div>
+                        <span>Facebook © 2019</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="libs/moment.min.js"></script>
+    <script src="libs/pikaday.js"></script>
+    <script src="libs/js-form-validator.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
