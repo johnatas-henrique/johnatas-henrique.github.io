@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { AllContext } from './AllContexts';
 
 const Greeting = () => {
-  const locStorParse = () => {
-    return localStorage.getItem('nome') || '';
-  }
-  const [nome, setNome] = useState(locStorParse);
 
-  useEffect(() => {
-    localStorage.setItem('nome', nome);
-  }, [nome]);
+  const { nome, alteraNome } = useContext(AllContext);
 
   return (
     <div style={{ border: 1 + "px solid black" }}>
@@ -16,7 +11,7 @@ const Greeting = () => {
       <div>
         <input
           type="text"
-          onChange={((e) => setNome(e.target.value))}
+          onChange={((e) => alteraNome(e))}
           value={nome}
         />
         {nome ? <p>Greetings {nome}</p> : <p>Escreva um nome na caixa</p>}
