@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useRef } from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './css/global';
+import theme from './css/theme';
+import { PortfolioContext } from './context/Portfolio';
+import { Burger, Menu } from './components';
+import { useOnClickOutside } from './hooks';
 
-function App() {
+const App = () => {
+  const { isFetching, openBurger, setOpenBurger } = useContext(PortfolioContext);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpenBurger(false));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    isFetching
+      ? <div>Loading</div>
+      : (
+        <ThemeProvider theme={theme}>
+          <>
+            <GlobalStyles />
+            <div>
+              <h1>Hello. This is burger menu tutorial</h1>
+              <img src="https://image.flaticon.com/icons/svg/2016/2016012.svg" alt="burger icon" />
+              <small>Icon made by Freepik from www.flaticon.com</small>
+            </div>
+            <div ref={node}>
+              <Menu openBurger={openBurger} setOpenBurger={setOpenBurger} />
+              <Burger openBurger={openBurger} setOpenBurger={setOpenBurger} />
+            </div>
+          </>
+        </ThemeProvider>
+      )
   );
-}
+};
 
 export default App;
