@@ -1,10 +1,14 @@
 import React, { useContext, useRef } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './css/global';
 import theme from './css/theme';
 import { PortfolioContext } from './context/Portfolio';
 import { Burger, Menu } from './components';
 import { useOnClickOutside } from './hooks';
+import {
+  Main, About, Contact, Projects, Skills,
+} from './pages';
 
 const App = () => {
   const { isFetching, openBurger, setOpenBurger } = useContext(PortfolioContext);
@@ -17,15 +21,17 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyles />
-            <div>
-              <h1>Hello. This is burger menu tutorial</h1>
-              <img src="https://image.flaticon.com/icons/svg/2016/2016012.svg" alt="burger icon" />
-              <small>Icon made by Freepik from www.flaticon.com</small>
-            </div>
             <div ref={node}>
               <Menu openBurger={openBurger} setOpenBurger={setOpenBurger} />
               <Burger openBurger={openBurger} setOpenBurger={setOpenBurger} />
             </div>
+            <Switch>
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/projects" component={Projects} />
+              <Route path="/skills" component={Skills} />
+              <Route exact path="/" component={Main} />
+            </Switch>
           </>
         </ThemeProvider>
       )

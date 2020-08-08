@@ -6,7 +6,7 @@ const StyledMenu = styled.nav`
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
   height: 100vh;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
   position: absolute;
   top: 0;
@@ -18,12 +18,16 @@ const StyledMenu = styled.nav`
     width: 100%;
   }
 
+  span {
+    margin-right: 15px;
+  }
+
   a {
     font-size: 2rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 2rem 0;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+    /* letter-spacing: 0.5rem; */
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
