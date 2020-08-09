@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import logo from '../desktop.jpg';
+import logo from '../images/desktop.jpg';
 
 const GlobalStyles = createGlobalStyle`
   html, body {

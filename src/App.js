@@ -21,7 +21,6 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <div ref={node}>
           <Menu openBurger={openBurger} setOpenBurger={setOpenBurger} />
           <Burger openBurger={openBurger} setOpenBurger={setOpenBurger} />

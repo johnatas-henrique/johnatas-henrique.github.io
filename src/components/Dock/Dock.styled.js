@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledDock = styled.nav`
 
+  align-items: center;
   display: flex;
   justify-content: space-around;
   overflow: hidden;
@@ -18,14 +19,23 @@ const StyledDock = styled.nav`
 
   div.left {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     width: 50%;
   }
 
   div {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 50%;
+  }
+
+  img {
+    height: 2rem;
+    margin-top: 4px;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      height: 1.5rem;
+      text-align: center;
+    }
   }
 
   p, a {

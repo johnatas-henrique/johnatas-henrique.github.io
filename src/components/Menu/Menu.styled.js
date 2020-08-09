@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../../menu.jpg';
+import logo from '../../images/menu.jpg';
 
 const StyledMenu = styled.nav`
   background: ${({ theme }) => theme.primaryTwo};
