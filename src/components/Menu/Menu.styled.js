@@ -1,19 +1,35 @@
 import styled from 'styled-components';
+import logo from '../../menu.jpg';
 
 const StyledMenu = styled.nav`
+  background: ${({ theme }) => theme.primaryTwo};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: ${({ theme }) => theme.primaryLight};
   height: 100vh;
-  text-align: center;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
+  justify-content: center;
   left: 0;
-  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  padding: 1.5rem;
+  text-align: center;
+  top: 0;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+  transition: transform 0.5s linear;
+  /* width: 100vw; */
   
+  ::before {
+    background-image: url(${logo});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
@@ -25,10 +41,10 @@ const StyledMenu = styled.nav`
   a {
     font-size: 2rem;
     /* text-transform: uppercase; */
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     font-weight: bold;
     /* letter-spacing: 0.5rem; */
-    color: ${({ theme }) => theme.primaryDark};
+    color: ${({ theme }) => theme.primaryOne};
     text-decoration: none;
     transition: color 0.3s linear;
     
@@ -38,6 +54,7 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
+      background-color: ${({ theme }) => theme.primaryOne};
       color: ${({ theme }) => theme.primaryHover};
     }
   }

@@ -1,8 +1,9 @@
 const theme = {
-  primaryDark: '#0D0C06',
-  primaryLight: '#EFFFFA',
-  primaryHover: '#343078',
-  mobile: '576px',
+  primaryOne: '#090909',
+  primaryTwo: '#FFFFFF',
+  primaryThree: '#CCCCCC',
+  primaryHover: '#808080',
+  mobile: '768px',
 };
 
 export default theme;
