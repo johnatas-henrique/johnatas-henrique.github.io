@@ -9,6 +9,7 @@ const PortfolioProvider = ({ children }) => {
   const [isFetching, setIsFetching] = useState(false);
   const [openBurger, setOpenBurger] = useState(false);
   const [gitInfo, setGitInfo] = useState(null);
+  const [location, setLocation] = useState(null);
 
   // Functions
 
@@ -16,9 +17,13 @@ const PortfolioProvider = ({ children }) => {
     const url = 'https://gitconnected.com/v1/portfolio/johnatas-henrique';
     const fetchData = async () => {
       setIsFetching(true);
-      const { data } = await axios.get(url);
-      setGitInfo(data);
-      console.log(data);
+      const response = await axios.get(url).catch((err) => err.response);
+      if (response && response.status === 200) {
+        setGitInfo(response.data);
+      } else {
+        setGitInfo('Ocorreu um erro, tente recarregar a página');
+      }
+      console.log(gitInfo);
       setIsFetching(false);
     };
     fetchData();
@@ -33,6 +38,8 @@ const PortfolioProvider = ({ children }) => {
     setOpenBurger,
     gitInfo,
     setGitInfo,
+    location,
+    setLocation,
   };
 
   // Render
