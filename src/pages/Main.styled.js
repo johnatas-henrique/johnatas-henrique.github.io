@@ -35,11 +35,6 @@ const StyledMain = styled.div`
     color: ${({ theme }) => theme.primaryOne};
     padding: 0 1rem;
   }
-  
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
-  }
 
   a.button {
     font-size: 2rem;
@@ -72,6 +67,7 @@ const StyledMain = styled.div`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: 1.5rem;
     text-align: center;
+    width: 100%;
   }
 `;
 
