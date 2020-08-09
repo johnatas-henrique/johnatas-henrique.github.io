@@ -4,37 +4,39 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './css/global';
 import theme from './css/theme';
 import { PortfolioContext } from './context/Portfolio';
-import { Burger, Menu } from './components';
+import { Burger, Menu, Dock } from './components';
 import { useOnClickOutside } from './hooks';
 import {
   Main, About, Contact, Projects, Skills,
 } from './pages';
 
 const App = () => {
-  const { isFetching, openBurger, setOpenBurger } = useContext(PortfolioContext);
+  const { openBurger, setOpenBurger } = useContext(PortfolioContext);
   const node = useRef();
   useOnClickOutside(node, () => setOpenBurger(false));
   return (
-    isFetching
-      ? <div>Loading</div>
-      : (
-        <ThemeProvider theme={theme}>
-          <>
-            <GlobalStyles />
-            <div ref={node}>
-              <Menu openBurger={openBurger} setOpenBurger={setOpenBurger} />
-              <Burger openBurger={openBurger} setOpenBurger={setOpenBurger} />
-            </div>
-            <Switch>
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/projects" component={Projects} />
-              <Route path="/skills" component={Skills} />
-              <Route exact path="/" component={Main} />
-            </Switch>
-          </>
-        </ThemeProvider>
-      )
+    /* isFetching
+        ? <div>Loading</div>
+        : ( */
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <div ref={node}>
+          <Menu openBurger={openBurger} setOpenBurger={setOpenBurger} />
+          <Burger openBurger={openBurger} setOpenBurger={setOpenBurger} />
+        </div>
+        <Switch>
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/skills" component={Skills} />
+          <Route exact path="/" component={Main} />
+        </Switch>
+        <Dock />
+      </>
+    </ThemeProvider>
+    /* ) */
   );
 };
 
