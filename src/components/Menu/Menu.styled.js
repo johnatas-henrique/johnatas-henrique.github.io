@@ -40,10 +40,8 @@ const StyledMenu = styled.nav`
 
   a {
     font-size: 2rem;
-    /* text-transform: uppercase; */
     padding: 1.5rem 0;
     font-weight: bold;
-    /* letter-spacing: 0.5rem; */
     color: ${({ theme }) => theme.primaryOne};
     text-decoration: none;
     transition: color 0.3s linear;
@@ -55,6 +53,7 @@ const StyledMenu = styled.nav`
 
     &:hover {
       background-color: ${({ theme }) => theme.primaryOne};
+      border-radius: 5px;
       color: ${({ theme }) => theme.primaryHover};
     }
   }
