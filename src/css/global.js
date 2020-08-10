@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100vw;
     justify-content: center;
     text-rendering: optimizeLegibility;
-    position: relative;
+    /* position: relative; */
     @media (max-width: ${({ theme }) => theme.mobile}) {
       align-items: flex-start;
     }
