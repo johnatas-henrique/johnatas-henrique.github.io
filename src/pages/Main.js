@@ -8,7 +8,7 @@ const Main = () => {
 
   useEffect(() => {
     setLocation('Home');
-  }, []);
+  }, [setLocation]);
 
   return (
     <StyledMain>

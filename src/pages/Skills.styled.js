@@ -16,25 +16,39 @@ const showText = keyframes`
 `;
 
 const StyledSkills = styled.div`
-
+  
+  align-items: center;
   animation: ${showText} 1s linear;
+  margin: 0 auto;
+  width: 37.5rem;
+  max-width: 1100px;
 
   div.text{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 4rem;
     @media (max-width: ${({ theme }) => theme.mobile}) {
       align-items: flex-start;
     }
   }
   
+  .text p {
+    
+  }
+
   h1, h2 {
     color: ${({ theme }) => theme.primaryOne};
     font-size: 200%;
     padding: 0 1rem;
+    text-align: center;
   }
 
   h3, h4 {
     color: ${({ theme }) => theme.primaryOne};
     padding: 0 1rem;
+    text-align: center;
+    width: 33%;
   }
   
   @media (max-width: ${({ theme }) => theme.mobile}) {

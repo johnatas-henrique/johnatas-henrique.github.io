@@ -6,7 +6,7 @@ const Contact = () => {
 
   useEffect(() => {
     setLocation('Contato');
-  }, []);
+  }, [setLocation]);
 
   return (
     <div>

@@ -6,7 +6,7 @@ const Projects = () => {
 
   useEffect(() => {
     setLocation('Projetos');
-  }, []);
+  }, [setLocation]);
 
   return (
     <div>

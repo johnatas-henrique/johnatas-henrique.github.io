@@ -23,7 +23,6 @@ const PortfolioProvider = ({ children }) => {
       } else {
         setGitInfo('Ocorreu um erro, tente recarregar a página');
       }
-      console.log(gitInfo);
       setIsFetching(false);
     };
     fetchData();

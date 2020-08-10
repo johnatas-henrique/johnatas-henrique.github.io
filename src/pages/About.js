@@ -8,7 +8,7 @@ const About = () => {
 
   useEffect(() => {
     setLocation('Sobre mim');
-  }, []);
+  }, [setLocation]);
 
   return (
     <StyledAbout>

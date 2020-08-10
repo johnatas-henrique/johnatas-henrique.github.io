@@ -53,7 +53,7 @@ const StyledMenu = styled.nav`
 
     &:hover {
       background-color: ${({ theme }) => theme.primaryOne};
-      border-radius: 5px;
+      border-radius: 8px;
       color: ${({ theme }) => theme.primaryHover};
     }
   }
