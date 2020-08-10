@@ -52,6 +52,7 @@ const StyledSkills = styled.div`
   }
   
   @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin-top: 80px;
     font-size: 1.5rem;
     text-align: center;
     width: 100%;

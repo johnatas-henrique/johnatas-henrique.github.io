@@ -22,6 +22,7 @@ const StyledAbout = styled.div`
   width: 80%;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin-top: 80px;
     display: block;
     font-size: 1.5rem;
     text-align: center;
