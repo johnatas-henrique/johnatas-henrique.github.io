@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import { PortfolioContext } from '../context/Portfolio';
 import StyledContact from './Contact.styled';
+import whatsapp from '../images/whatsapp.png';
+import gitHub from '../images/githubBlack.png';
+import linkedIn from '../images/linkedinBlue.png';
 
 const sendFeedback = (templateId, variables) => {
   window.emailjs.send('gmail', templateId, variables)
@@ -40,36 +43,61 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   return (
     <StyledContact>
-      <form onSubmit={(event) => handleSubmit(
-        { name, email, message }, { setName, setEmail, setMessage }, event,
-      )}
-      >
-        <input
-          type="text"
-          name="name"
-          onChange={(event) => setName(event.target.value)}
-          value={name}
-          placeholder="Nome"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          onChange={(event) => setEmail(event.target.value)}
-          value={email}
-          placeholder="Email"
-          required
-        />
-        <textarea
-          type="text"
-          name="message"
-          onChange={(event) => setMessage(event.target.value)}
-          value={message}
-          placeholder="Escreva sua mensagem..."
-          required
-        />
-        <button type="submit">Enviar!</button>
-      </form>
+      <div className="flex-container">
+        <h1 className="title">Entre em contato</h1>
+        <div className="form-contact">
+          <form onSubmit={(event) => handleSubmit(
+            { name, email, message }, { setName, setEmail, setMessage }, event,
+          )}
+          >
+            <input
+              type="text"
+              name="name"
+              onChange={(event) => setName(event.target.value)}
+              value={name}
+              placeholder="Seu nome"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              onChange={(event) => setEmail(event.target.value)}
+              value={email}
+              placeholder="Seu e-mail"
+              required
+            />
+            <textarea
+              type="text"
+              name="message"
+              onChange={(event) => setMessage(event.target.value)}
+              value={message}
+              placeholder="Escreva sua mensagem..."
+              required
+            />
+            <button type="submit">Enviar!</button>
+          </form>
+        </div>
+        <div className="text">
+          <h4 className="contact-text">
+            Se gostou do que viu ou deseja entrar em contato, fique a
+            vontade que eu respondo o mais breve possível.
+          </h4>
+          <h4 className="contact-text">
+            Caso ache melhor, pode me encontrar também nas redes sociais:
+          </h4>
+          <h4 className="contact-text">
+            <a href="https://tinyurl.com/y3udj3hr" target="_blank" rel="noopener noreferrer">
+              <img className="icon" src={whatsapp} alt="WhatsApp logo" />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/johnatashenrique/">
+              <img className="icon" src={linkedIn} alt="LinkedIn Logo" />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnatas-henrique">
+              <img className="icon" src={gitHub} alt="GitHub Logo" />
+            </a>
+          </h4>
+        </div>
+      </div>
     </StyledContact>
   );
 };
