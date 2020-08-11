@@ -74,7 +74,8 @@ const Contact = () => {
               placeholder="Escreva sua mensagem..."
               required
             />
-            <button type="submit">Enviar!</button>
+            <br />
+            <button className="btn" type="submit">Enviar!</button>
           </form>
         </div>
         <div className="text">
@@ -85,7 +86,7 @@ const Contact = () => {
           <h4 className="contact-text">
             Caso ache melhor, pode me encontrar também nas redes sociais:
           </h4>
-          <h4 className="contact-text">
+          <h4 className="contact-icon">
             <a href="https://tinyurl.com/y3udj3hr" target="_blank" rel="noopener noreferrer">
               <img className="icon" src={whatsapp} alt="WhatsApp logo" />
             </a>

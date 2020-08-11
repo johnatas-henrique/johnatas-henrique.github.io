@@ -86,13 +86,21 @@ const StyledContacts = styled.div`
 
   h4.contact-text {
     margin: 0 auto 1rem;
-    text-align: start;
+    text-align: justify;
   }
   
+  h4.contact-icon {
+    margin: 0 auto 1rem;
+    text-align: justify;
+    @media(max-width: ${({ theme }) => theme.mobile}) {
+    text-align: center;
+    }
+  }
+
   .icon {
     width: 32px;
     height: 32px;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
   
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -101,6 +109,37 @@ const StyledContacts = styled.div`
     text-align: center;
     width: 100%;
   }
+  
+  .btn { 
+    text-align: center; 
+    height: 3rem; 
+    width: 10rem; 
+    display: block;
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    background: ${({ theme }) => theme.primaryThree};
+    transition: all 1s linear;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      margin: 0 auto;
+    }
+  } 
+  
+  .btn:hover { 
+    animation: effect 0.4s infinite; 
+    transition: all 1s linear;
+    background: ${({ theme }) => theme.primaryOne};
+    color: ${({ theme }) => theme.primaryTwo};
+  } 
+  
+  @keyframes effect { 
+    0% { transform: translateX(0px) rotate(0deg); } 
+    20% { transform: translateX(-4px) rotate(-4deg); } 
+    40% { transform: translateX(-2px) rotate(-2deg); } 
+    60% { transform: translateX(4px) rotate(4deg); } 
+    80% { transform: translateX(2px) rotate(2deg); } 
+    100% { transform: translateX(0px) rotate(0deg); } 
+  } 
 `;
 
 export default StyledContacts;
