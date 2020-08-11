@@ -7,7 +7,7 @@ import { PortfolioContext } from './context/Portfolio';
 import { Burger, Menu, Dock } from './components';
 import { useOnClickOutside } from './hooks';
 import {
-  Main, About, Contact, Projects, Skills,
+  Main, About, Contact, Projects, Skills, NotFound,
 } from './pages';
 
 const App = () => {
@@ -15,9 +15,6 @@ const App = () => {
   const node = useRef();
   useOnClickOutside(node, () => setOpenBurger(false));
   return (
-    /* isFetching
-        ? <div>Loading</div>
-        : ( */
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
@@ -31,11 +28,11 @@ const App = () => {
           <Route path="/projects" component={Projects} />
           <Route path="/skills" component={Skills} />
           <Route exact path="/" component={Main} />
+          <Route component={NotFound} />
         </Switch>
         <Dock />
       </>
     </ThemeProvider>
-    /* ) */
   );
 };
 
