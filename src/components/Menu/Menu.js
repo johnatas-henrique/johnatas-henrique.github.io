@@ -24,6 +24,10 @@ const Menu = ({ openBurger }) => (
       <span role="img" aria-label="contato">&#x1f4e9;</span>
       Contato
     </a>
+    <a href="/404page">
+      <span role="img" aria-label="easter egg">😄</span>
+      Easter Egg
+    </a>
   </StyledMenu>
 );
 

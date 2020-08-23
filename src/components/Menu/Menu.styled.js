@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import logo from '../../images/menu.jpg';
 
 const StyledMenu = styled.nav`
+  z-index: 1001;
   background: ${({ theme }) => theme.primaryTwo};
   display: flex;
   flex-direction: column;
