@@ -16,7 +16,6 @@ const showText = keyframes`
 `;
 
 const StyledProjects = styled.div`
-
   animation: ${showText} 1s linear;
 
   div.text{
@@ -26,15 +25,26 @@ const StyledProjects = styled.div`
     }
   }
   
+  h1.title {
+    text-align: center;
+    width: 100%;
+  }
+
   h1, h2 {
     color: ${({ theme }) => theme.primaryOne};
     font-size: 200%;
+    margin: 0;
     padding: 0 1rem;
   }
 
   h3, h4 {
     color: ${({ theme }) => theme.primaryOne};
     padding: 0 1rem;
+  }
+
+  .loading {
+    font-size: 1.8rem;
+    font-weight: 700;
   }
   
   @media (max-width: ${({ theme }) => theme.mobile}) {
