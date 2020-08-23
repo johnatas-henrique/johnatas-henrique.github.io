@@ -20,7 +20,8 @@ const NotFound = () => {
         </div>
         <div className="text">
           <h3>Você parece perdido...</h3>
-          <h3>Que tal voltar a locais civilizados?</h3>
+          <h3>Que tal voltar a locais civilizados...</h3>
+          <h3>Mas antes, olhe o que acontece com o homem das cavernas...</h3>
           <Link className="link-btn" to="/">
             <button className="btn" type="button">Home</button>
           </Link>

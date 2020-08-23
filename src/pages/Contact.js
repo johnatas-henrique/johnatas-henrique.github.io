@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <StyledContact>
       <div className="flex-container">
-        <h1 className="title">Entre em contato</h1>
+        <h1 className="title">ENTRE EM CONTATO</h1>
         <div className="form-contact">
           <form onSubmit={(event) => handleSubmit(
             { name, email, message }, { setName, setEmail, setMessage }, event,
