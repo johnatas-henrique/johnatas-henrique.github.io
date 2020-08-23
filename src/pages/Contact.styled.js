@@ -84,7 +84,7 @@ const StyledContacts = styled.div`
     padding: 0 1rem;
   }
 
-  h4.contact-text {
+  h3.contact-text {
     margin: 0 auto 1rem;
     text-align: justify;
   }

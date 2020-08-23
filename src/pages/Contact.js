@@ -79,13 +79,13 @@ const Contact = () => {
           </form>
         </div>
         <div className="text">
-          <h4 className="contact-text">
+          <h3 className="contact-text">
             Se gostou do que viu ou deseja entrar em contato, fique a
             vontade que eu respondo o mais breve possível.
-          </h4>
-          <h4 className="contact-text">
+          </h3>
+          <h3 className="contact-text">
             Caso ache melhor, pode me encontrar também nas redes sociais:
-          </h4>
+          </h3>
           <h4 className="contact-icon">
             <a href="https://tinyurl.com/y3udj3hr" target="_blank" rel="noopener noreferrer">
               <img className="icon" src={whatsapp} alt="WhatsApp logo" />
