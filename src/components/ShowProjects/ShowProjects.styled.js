@@ -64,6 +64,7 @@ const StyledMenu = styled.nav`
 
   p {
     font-size: 1.5rem;
+    font-weight: 700;
     margin: 0;
     padding: 0 15%;
     text-align: justify;
