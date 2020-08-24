@@ -70,7 +70,7 @@ const StyledMenu = styled.nav`
     text-align: justify;
     width: 100%;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       padding: 0 1rem;
     }
   }
@@ -82,6 +82,7 @@ const StyledMenu = styled.nav`
   }
 
   .image {
+    border-radius: 1.25rem;
     width: 80%;
     pointer-events: none;
     @media (max-width: ${({ theme }) => theme.mobile}) {
