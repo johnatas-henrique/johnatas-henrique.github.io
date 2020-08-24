@@ -51,11 +51,19 @@ const StyledMenu = styled.nav`
       font-size: 1.5rem;
       text-align: center;
     }
-
+  
     &:hover {
       background-color: ${({ theme }) => theme.primaryOne};
       border-radius: 8px;
       color: ${({ theme }) => theme.primaryHover};
+    }
+  }
+
+  a:nth-of-type(1)
+  {
+    margin-top:40px;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      margin-top:0;
     }
   }
 `;
