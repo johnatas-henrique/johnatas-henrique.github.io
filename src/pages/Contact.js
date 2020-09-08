@@ -80,14 +80,14 @@ const Contact = () => {
         </div>
         <div className="text">
           <h3 className="contact-text">
-            Se gostou do que viu ou deseja entrar em contato, fique a
+            Se gostou do que viu ou deseja entrar em contato, fique à
             vontade que eu respondo o mais breve possível.
           </h3>
           <h3 className="contact-text">
             Caso ache melhor, pode me encontrar também nas redes sociais:
           </h3>
           <h4 className="contact-icon">
-            <a href="https://tinyurl.com/y3udj3hr" target="_blank" rel="noopener noreferrer">
+            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y3udj3hr">
               <img className="icon" src={whatsapp} alt="WhatsApp logo" />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/johnatashenrique/">

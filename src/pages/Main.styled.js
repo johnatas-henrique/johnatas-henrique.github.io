@@ -44,6 +44,7 @@ const StyledMain = styled.div`
     font-weight: bold;
     color: ${({ theme }) => theme.primaryOne};
     border: 1px solid ${({ theme }) => theme.primaryOne};
+    border-radius: 8px;
     text-decoration: none;
     transition: color 0.3s linear;
     @media (max-width: ${({ theme }) => theme.mobile}) {
