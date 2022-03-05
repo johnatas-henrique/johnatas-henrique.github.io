@@ -56,8 +56,8 @@ const Page = () => {
           Quando não estou online, gosto muito de pilotar minha moto e adoro trabalhar nos consertos da mecânica dela, é um de meus hobbies.
           <br />
           Como projeto pessoal, estou desenvolvendo o{' '}
-          {/* <NextLink href="/works/fake-racer"> */}
-          <Link href="https://johnatas-henrique.github.io/fake-racer/" passHref>
+          {/* <NextLink href="/projects/fake-racer"> */}
+          <Link href="https://johnatas-henrique.github.io/fake-racer/">
             <a target="_blank" rel="noopener noreferrer">
               Fake-Racer
             </a>
@@ -66,7 +66,7 @@ const Page = () => {
           {' '}que é um jogo de corridas inspirado nos clássicos da era 16 bit.
         </Paragraph>
         <Box align='center' my={4}>
-          <NextLink href='/works' passHref>
+          <NextLink href='/projects' passHref>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal" >
               Meus projetos
             </Button>
