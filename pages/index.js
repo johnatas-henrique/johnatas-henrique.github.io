@@ -31,7 +31,7 @@ const Page = () => {
             flexShrink={0}
             mt={{ base: 4, md: 0 }}
             ml={{ md: 6 }}
-            align="center"
+            align='center'
           >
             <Image
               borderColor='whiteAlpha.800'
@@ -47,7 +47,7 @@ const Page = () => {
         </Box>
 
         <Section delay={0.1}>
-          <Heading as="h3" variant="section-title">
+          <Heading as='h3' variant='section-title'>
             Quem eu sou
           </Heading>
           <Paragraph>
@@ -58,9 +58,9 @@ const Page = () => {
             Quando não estou online, gosto muito de pilotar minha moto e adoro trabalhar nos consertos da mecânica dela, é um de meus hobbies.
             <br />
             Como projeto pessoal, estou desenvolvendo o{' '}
-            {/* <NextLink href="/projects/fake-racer"> */}
-            <Link href="https://johnatas-henrique.github.io/fake-racer/" target="_blank">
-              {/* <a target="_blank" rel="noopener noreferrer"> */}
+            {/* <NextLink href='/projects/fake-racer'> */}
+            <Link href='https://johnatas-henrique.github.io/fake-racer/' target='_blank'>
+              {/* <a target='_blank' rel='noopener noreferrer'> */}
                 Fake-Racer
               {/* </a> */}
             </Link>
@@ -69,7 +69,7 @@ const Page = () => {
           </Paragraph>
           <Box align='center' my={4}>
             <NextLink href='/projects' passHref>
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal" >
+              <Button rightIcon={<ChevronRightIcon />} colorScheme='teal' >
                 Meus projetos
               </Button>
             </NextLink>

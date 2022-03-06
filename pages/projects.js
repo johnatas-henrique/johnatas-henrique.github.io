@@ -9,14 +9,14 @@ const Projects = () => {
   return (
     <Layout>
       <Container maxW='container.md'>
-        <Heading as="h3" fontSize={20} mb={4}>
+        <Heading as='h3' fontSize={20} mb={4}>
           Projects
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.1}>
             <ProjectGridItem
-              id="inkdrop"
-              title="Inkdrop"
+              id='inkdrop'
+              title='Inkdrop'
               thumbnail={thumbInkdrop}
             >
               A markdown note-taking app with 100+ plugins, cross-platform
@@ -24,8 +24,8 @@ const Projects = () => {
           </Section>
           <Section delay={0.2}>
             <ProjectGridItem
-              id="walknote"
-              title="walknote"
+              id='walknote'
+              title='walknote'
               thumbnail={thumbWalknote}
             >
               A walkman app to play music on the go
@@ -36,7 +36,7 @@ const Projects = () => {
         <Section delay={0.4}>
           <Divider my={6} />
 
-          <Heading as="h3" fontSize={20} mb={4}>
+          <Heading as='h3' fontSize={20} mb={4}>
             Old works
           </Heading>
         </Section>
