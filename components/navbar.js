@@ -39,10 +39,12 @@ const Navbar = props => {
       <Container
         display='flex'
         p={2}
-        maxW='container.md'
+        maxW='container.lg'
         wrap='wrap'
         align='center'
         justify='space-between'
+        paddingLeft={6}
+        paddingRight={8}
       >
         <Flex align='center' mr={5}>
           <Heading as='h1' size='lg' letterSpacing={'tighter'}>

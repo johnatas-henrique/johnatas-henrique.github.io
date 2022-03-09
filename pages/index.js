@@ -9,7 +9,7 @@ import { BioSection, BioYear } from '../components/bio';
 const Page = () => {
   return (
     <Layout>
-      <Container maxW='container.md' >
+      <Container maxW='container.lg' >
         <Box
           borderRadius='lg'
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}

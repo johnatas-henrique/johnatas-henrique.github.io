@@ -23,7 +23,7 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Container maxW='container.md'>
+      <Container maxW='container.lg'>
         <Heading as='h3' fontSize={20} mb={4}>
           Projetos
         </Heading>
