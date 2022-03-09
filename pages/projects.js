@@ -1,45 +1,55 @@
+import { useEffect, useState } from 'react';
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react';
+import axios from 'axios';
 import Section from '../components/section';
 import Layout from '../components/layouts/article';
 import { ProjectGridItem } from '../components/grid-item';
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png';
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png';
+import P from '../components/paragraph';
+
+const fetchData = async (setApiData) => {
+  const url = 'https://gitconnected.com/v1/portfolio/johnatas-henrique';
+  const { data } = await axios.get(url).catch(e => console.error(e));
+  setApiData(data);
+}
 
 const Projects = () => {
+  const [apiData, setApiData] = useState([]);
+
+  useEffect(() => {
+    fetchData(setApiData);
+  }, []);
+  
+  const { projects } = apiData;
+
   return (
     <Layout>
       <Container maxW='container.md'>
         <Heading as='h3' fontSize={20} mb={4}>
-          Projects
+          Projetos
         </Heading>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.1}>
-            <ProjectGridItem
-              id='inkdrop'
-              title='Inkdrop'
-              thumbnail={thumbInkdrop}
-            >
-              A markdown note-taking app with 100+ plugins, cross-platform
-            </ProjectGridItem>
-          </Section>
-          <Section delay={0.2}>
-            <ProjectGridItem
-              id='walknote'
-              title='walknote'
-              thumbnail={thumbWalknote}
-            >
-              A walkman app to play music on the go
-            </ProjectGridItem>
-          </Section>
-        </SimpleGrid>
+        {projects ? (
+          <>
+            <SimpleGrid columns={[1, 1, 2]} gap={6}>
+              {projects.map((project) => (
+                <Section delay={0.1} key={project.name}>
+                  <ProjectGridItem
+                    id={project.name}
+                    title={project.displayName}
+                    thumbnail={project.images[0].resolutions.desktop.url}
+                  >
+                    {project.summary}
+                  </ProjectGridItem>
+                </Section>
+              ))}
+            </SimpleGrid>
 
-        <Section delay={0.4}>
-          <Divider my={6} />
-
-          <Heading as='h3' fontSize={20} mb={4}>
-            Old works
-          </Heading>
-        </Section>
+            <Divider my={6} />
+          </>
+        ) : (
+          <P>
+            Carregando...
+          </P>
+        )}
       </Container>
     </Layout>
   )
