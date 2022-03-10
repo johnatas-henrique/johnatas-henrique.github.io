@@ -1,24 +1,21 @@
 import { useEffect, useState } from 'react';
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react';
-import axios from 'axios';
 import Section from '../components/section';
 import Layout from '../components/layouts/article';
 import { ProjectGridItem } from '../components/grid-item';
 import P from '../components/paragraph';
+import fetchApiData from '../libs/fetchApiData';
+import Loading from '../components/loading';
 
-const fetchData = async (setApiData) => {
-  const url = 'https://gitconnected.com/v1/portfolio/johnatas-henrique';
-  const { data } = await axios.get(url).catch(e => console.error(e));
-  setApiData(data);
-}
 
 const Projects = () => {
   const [apiData, setApiData] = useState([]);
+  const url = 'https://gitconnected.com/v1/portfolio/johnatas-henrique';
 
   useEffect(() => {
-    fetchData(setApiData);
+    fetchApiData(url, setApiData);
   }, []);
-  
+
   const { projects } = apiData;
 
   return (
@@ -46,9 +43,7 @@ const Projects = () => {
             <Divider my={6} />
           </>
         ) : (
-          <P>
-            Carregando...
-          </P>
+          <Loading />
         )}
       </Container>
     </Layout>
