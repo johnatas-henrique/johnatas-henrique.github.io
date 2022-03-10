@@ -6,12 +6,13 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons';
 import ThemeToggleButton from './theme-toggle-button';
 
+const portfolioLink = 'https://github.com/johnatas-henrique/johnatas-henrique.github.io';
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha900');
 
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <Link
         p={2}
         bg={active ? 'glassTeal' : undefined}
@@ -25,6 +26,7 @@ const LinkItem = ({ href, path, children }) => {
 
 const Navbar = props => {
   const { path } = props;
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha900');
 
   return (
     <Box
@@ -60,11 +62,19 @@ const Navbar = props => {
           mt={{ base: 4, nmd: 0 }}
         >
           <LinkItem href='/projects' path={path}>
-            Projects
+            Projetos
           </LinkItem>
           <LinkItem href='/posts' path={path}>
             Posts
           </LinkItem>
+          <Link
+            p={2}
+            bg={undefined}
+            color={inactiveColor}
+            href={portfolioLink}
+          >
+            Ver código fonte
+          </Link>
         </Stack>
 
         <Box flex={1} align='right'>
@@ -79,15 +89,17 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href='/' passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>Sobre mim</MenuItem>
                 </NextLink>
                 <NextLink href='/projects' passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
+                  <MenuItem as={Link}>Projetos</MenuItem>
                 </NextLink>
                 <NextLink href='/posts' passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href='https://github.com/johnatas-henrique/'>View Source</MenuItem>
+                <MenuItem as={Link} href={portfolioLink}>
+                  Ver código fonte
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
