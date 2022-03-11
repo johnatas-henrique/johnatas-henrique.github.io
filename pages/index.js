@@ -1,10 +1,15 @@
 import NextLink from 'next/link';
-import { Container, Box, Heading, Image, Link, useColorModeValue, Button } from '@chakra-ui/react';
+import { Container, Box, Heading, Image, Link, useColorModeValue, Button, ListItem, List, Icon } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
 import Paragraph from '../components/paragraph';
 import { BioSection, BioYear } from '../components/bio';
+import {
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoLinkedin
+} from 'react-icons/io5';
 
 const Page = () => {
   return (
@@ -58,13 +63,9 @@ const Page = () => {
             Quando não estou online, gosto muito de pilotar minha moto e adoro trabalhar nos consertos da mecânica dela, é um de meus hobbies.
             <br />
             Como projeto pessoal, estou desenvolvendo o{' '}
-            {/* <NextLink href='/projects/fake-racer'> */}
             <Link href='https://johnatas-henrique.github.io/fake-racer/' target='_blank'>
-              {/* <a target='_blank' rel='noopener noreferrer'> */}
-                Fake-Racer
-              {/* </a> */}
+              Fake-Racer
             </Link>
-            {/* </NextLink> */}
             {' '}que é um jogo de corridas inspirado nos clássicos da era 16 bit.
           </Paragraph>
           <Box align='center' my={4}>
@@ -109,6 +110,51 @@ const Page = () => {
           <Paragraph>
             Videogames, Mecânica, Animes, Fórmula 1
           </Paragraph>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as='h3' variant='section-title'>
+            Na web
+          </Heading>
+
+          <List>
+            <ListItem>
+              <Link href='https://github.com/johnatas-henrique' target='_blank'>
+                <Button
+                  variant='ghost'
+                  colorScheme='teal'
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  johnatas-henrique
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link href='https://www.linkedin.com/in/johnatashenrique/' target='_blank'>
+                <Button
+                  variant='ghost'
+                  colorScheme='teal'
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  @johnatashenrique
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link href='https://www.instagram.com/johnatashenrique/' target='_blank'>
+                <Button
+                  variant='ghost'
+                  colorScheme='teal'
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                >
+                  @johnatashenrique
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+
         </Section>
       </Container>
     </Layout>

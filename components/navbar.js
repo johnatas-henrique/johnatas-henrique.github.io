@@ -72,6 +72,7 @@ const Navbar = props => {
             bg={undefined}
             color={inactiveColor}
             href={portfolioLink}
+            target='_blank'
           >
             Ver código fonte
           </Link>
@@ -97,7 +98,7 @@ const Navbar = props => {
                 <NextLink href='/posts' passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href={portfolioLink}>
+                <MenuItem as={Link} href={portfolioLink} target='_blank'>
                   Ver código fonte
                 </MenuItem>
               </MenuList>
