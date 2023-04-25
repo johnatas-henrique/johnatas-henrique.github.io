@@ -131,13 +131,13 @@ const Page = () => {
             </ListItem>
 
             <ListItem>
-              <Link href='https://www.linkedin.com/in/johnatashenrique/' target='_blank'>
+              <Link href='https://www.linkedin.com/in/johnatas-henrique/' target='_blank'>
                 <Button
                   variant='ghost'
                   colorScheme='teal'
                   leftIcon={<Icon as={IoLogoLinkedin} />}
                 >
-                  @johnatashenrique
+                  johnatas-henrique
                 </Button>
               </Link>
             </ListItem>
@@ -149,7 +149,7 @@ const Page = () => {
                   colorScheme='teal'
                   leftIcon={<Icon as={IoLogoInstagram} />}
                 >
-                  @johnatashenrique
+                  johnatashenrique
                 </Button>
               </Link>
             </ListItem>
