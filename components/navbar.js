@@ -1,15 +1,27 @@
-import Logo from './logo';
-import NextLink from 'next/link';
+import Logo from './logo'
+import NextLink from 'next/link'
 import {
-  Container, Box, Link, Stack, Heading, Flex, Menu, MenuItem, MenuList, MenuButton, IconButton, useColorModeValue
-} from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import ThemeToggleButton from './theme-toggle-button';
+  Container,
+  Box,
+  Link,
+  Stack,
+  Heading,
+  Flex,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  IconButton,
+  useColorModeValue
+} from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggleButton from './theme-toggle-button'
 
-const portfolioLink = 'https://github.com/johnatas-henrique/johnatas-henrique.github.io';
+const portfolioLink =
+  'https://github.com/johnatas-henrique/johnatas-henrique.github.io'
 const LinkItem = ({ href, path, children }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha900');
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha900')
 
   return (
     <NextLink href={href} passHref>
@@ -17,7 +29,7 @@ const LinkItem = ({ href, path, children }) => {
         p={2}
         bg={active ? 'glassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
-        borderRadius='5px'
+        borderRadius="5px"
       >
         {children}
       </Link>
@@ -26,31 +38,31 @@ const LinkItem = ({ href, path, children }) => {
 }
 
 const Navbar = props => {
-  const { path } = props;
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha900');
+  const { path } = props
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha900')
 
   return (
     <Box
-      position='fixed'
-      as='nav'
-      w='100%'
+      position="fixed"
+      as="nav"
+      w="100%"
       bg={useColorModeValue('#fffffff40', '#20202380')}
       style={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}
     >
       <Container
-        display='flex'
+        display="flex"
         p={2}
-        maxW='container.lg'
-        wrap='wrap'
-        align='center'
-        justify='space-between'
+        maxW="container.lg"
+        wrap="wrap"
+        align="center"
+        justify="space-between"
         paddingLeft={6}
         paddingRight={8}
       >
-        <Flex align='center' mr={5}>
-          <Heading as='h1' size='lg' letterSpacing={'tighter'}>
+        <Flex align="center" mr={5}>
+          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
             <Logo />
           </Heading>
         </Flex>
@@ -58,14 +70,14 @@ const Navbar = props => {
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
-          alignItems='center'
+          alignItems="center"
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href='/projects' path={path}>
+          <LinkItem href="/projects" path={path}>
             Projetos
           </LinkItem>
-          <LinkItem href='/contact' path={path}>
+          <LinkItem href="/contact" path={path}>
             Contato
           </LinkItem>
           <Link
@@ -73,33 +85,33 @@ const Navbar = props => {
             bg={undefined}
             color={inactiveColor}
             href={portfolioLink}
-            target='_blank'
+            target="_blank"
           >
             Ver código fonte
           </Link>
         </Stack>
 
-        <Box flex={1} align='right'>
+        <Box flex={1} align="right">
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
-                variant='outline'
-                aria-label='Options'
+                variant="outline"
+                aria-label="Options"
               />
               <MenuList>
-                <NextLink href='/' passHref>
+                <NextLink href="/" passHref>
                   <MenuItem as={Link}>Sobre mim</MenuItem>
                 </NextLink>
-                <NextLink href='/projects' passHref>
+                <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projetos</MenuItem>
                 </NextLink>
-                <NextLink href='/contact' passHref>
+                <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contato</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href={portfolioLink} target='_blank'>
+                <MenuItem as={Link} href={portfolioLink} target="_blank">
                   Ver código fonte
                 </MenuItem>
               </MenuList>
@@ -111,4 +123,4 @@ const Navbar = props => {
   )
 }
 
-export default Navbar;
+export default Navbar

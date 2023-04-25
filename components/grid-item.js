@@ -1,19 +1,19 @@
-import NextLink from 'next/link';
-import Image from 'next/image';
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
+import NextLink from 'next/link'
+import Image from 'next/image'
+import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
-  <Box w='100%' align='center' >
-    <LinkBox cursor='pointer'>
+  <Box w="100%" align="center">
+    <LinkBox cursor="pointer">
       <Image
         src={thumbnail}
         alt={title}
-        className='grid-item-thumbnail'
-        placeholder='blur'
-        loading='lazy'
+        className="grid-item-thumbnail"
+        placeholder="blur"
+        loading="lazy"
       />
-      <LinkOverlay href={href} target='_blank'>
+      <LinkOverlay href={href} target="_blank">
         <Text mt={2}>{title}</Text>
       </LinkOverlay>
       <Text fontSize={14}>{children}</Text>
@@ -22,22 +22,26 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 )
 
 export const ProjectGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w='100%' align='center'>
+  <Box w="100%" align="center">
     <NextLink href={`/projects/${id}`} passHref>
-      <LinkBox cursor='pointer'>
+      <LinkBox cursor="pointer">
         <Image
           src={thumbnail}
           alt={title}
-          className='grid-item-thumbnail'
-          width='100%'
-          height='60%'
-          layout='responsive'
-          objectFit='contain'
+          className="grid-item-thumbnail"
+          width="100%"
+          height="60%"
+          layout="responsive"
+          objectFit="contain"
         />
         <LinkOverlay href={`/projects/${id}`}>
-          <Text mt={2} fontSize={24}>{title}</Text>
+          <Text mt={2} fontSize={24}>
+            {title}
+          </Text>
         </LinkOverlay>
-        <Text fontSize={16} align='justify'>{children}</Text>
+        <Text fontSize={16} align="justify">
+          {children}
+        </Text>
       </LinkBox>
     </NextLink>
   </Box>

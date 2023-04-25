@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Text, useColorModeValue } from '@chakra-ui/react';
+import Link from 'next/link'
+import Image from 'next/image'
+import { Text, useColorModeValue } from '@chakra-ui/react'
 
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -18,16 +18,16 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const helmetImg = `/images/helmet${useColorModeValue('', '-dark')}.png`;
+  const helmetImg = `/images/helmet${useColorModeValue('', '-dark')}.png`
 
   return (
     <Link href={'/'}>
       <a>
         <LogoBox>
-          <Image src={helmetImg} width={20} height={20} alt='logo' />
+          <Image src={helmetImg} width={20} height={20} alt="logo" />
           <Text
             ml={2}
-            fontWeight='bold'
+            fontWeight="bold"
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           >
             Johnatas Henrique
@@ -38,4 +38,4 @@ const Logo = () => {
   )
 }
 
-export default Logo;
+export default Logo
