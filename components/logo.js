@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { Text, useColorModeValue } from '@chakra-ui/react'
+import { Image, Text, useColorModeValue } from '@chakra-ui/react'
 
 import styled from '@emotion/styled'
 
@@ -24,7 +23,7 @@ const Logo = () => {
     <Link href={'/'}>
       <a>
         <LogoBox>
-          <Image src={helmetImg} width={20} height={20} alt="logo" />
+          <Image src={helmetImg} width='20px' height='20px' alt="logo" />
           <Text
             ml={2}
             fontWeight="bold"
