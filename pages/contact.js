@@ -1,11 +1,8 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
-import { FormControl, FormLabel, Heading, Input, Link, Stack, Textarea, useColorModeValue } from '@chakra-ui/react';
+import { FormControl, Image, FormLabel, Heading, Input, Link, Stack, Textarea, useColorModeValue } from '@chakra-ui/react';
 import Layout from '../components/layouts/article';
-import whatsapp from '../public/images/whatsapp.png';
-import linkedIn from '../public/images/linkedin.png';
-import Image from 'next/image';
 
 const Contact = () => {
   const form = useRef();
@@ -120,10 +117,10 @@ const Contact = () => {
         </Heading>
         <Heading as='h5' display='flex' justifyContent='space-evenly' mt={10}>
           <Link target="_blank" w='10%' href="https://tinyurl.com/y3udj3hr" >
-            <Image src={whatsapp} alt="WhatsApp logo" />
+            <Image src='/images/whatsapp.png' alt="WhatsApp logo" />
           </Link>
           <Link target="_blank" w='10%' href="https://www.linkedin.com/in/johnatashenrique/">
-            <Image src={linkedIn} alt="LinkedIn Logo" />
+            <Image src='/images/linkedin.png' alt="LinkedIn Logo" />
           </Link>
           <Link target="_blank" w='10%' href="https://github.com/johnatas-henrique">
             <Image src={githubImg} width={100} height={100} alt="GitHub Logo" />
