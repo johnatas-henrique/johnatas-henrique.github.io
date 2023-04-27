@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
 
     steps:
       - name: Checkout 🛎️
@@ -24,6 +25,10 @@ jobs:
 
       - name: Build my App
         run: npm run build && npm run export && touch ./out/.nojekyll
+        env:
+          NEXT_PUBLIC_EMAIL_JS_SERVICE: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_SERVICE }}
+          NEXT_PUBLIC_EMAIL_JS_TEMPLATE: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_TEMPLATE }}
+          NEXT_PUBLIC_EMAIL_JS_USER: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_USER }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
